@@ -34,7 +34,7 @@ x = 5.5 # this is not a value anymore, it is a float
 print(x)
 print(type(x))
 
-x = "hello"
+x = "hello1234"
 # this represents a string (str) value, another data type
 # a sequence of characters
 print(x)
