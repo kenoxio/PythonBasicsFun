@@ -6,3 +6,4 @@ n = int(input("enter an interger> "))
 m = m + 5
 n = 3 * n
 print("m =", m, "\\n =", n)
+# prints "m = 17 \n = 0"
