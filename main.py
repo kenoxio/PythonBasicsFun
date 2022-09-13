@@ -1,4 +1,5 @@
 import math
+from operator import itemgetter
 
 # this is a one line comment askldjfaskldj
 # a comment is used to document your code
@@ -62,10 +63,10 @@ print(5 ** 2)
 # print (3 / 0)
 # print(2 ** 4 ** (2/4))
 print (math.pow(5,2))
-print("Enter your favorite number: ")
-fav_num = input()
-print(type(fav_num))
-print("Your favorite number doubled is", 2 * fav_num)
+#print("Enter your favorite number: ")
+#fav_num = input()
+#print(type(fav_num))
+#print("Your favorite number doubled is", 2 * fav_num)
 # we often need to convert between types
 # type conversion
 
@@ -86,3 +87,107 @@ if x == 5: # == is the equality operator
     # python uses indentation (1 tab = 4 spaces)
     # to group code together into "blocks"
     # like {} C/C++
+
+# we also have an else keyword
+# else executes when preceding if condition is false
+if x == 7:
+    print("x = 5")
+else:
+    print("x =/= 5")
+
+# we also have an elif (else if) keyword
+# use elif when you want ot test multiple conditions in a row
+x = -2
+if x < 0:
+    print("x is negative")
+elif x > 0:
+    print("x is postive")
+else:
+    print("x = 0")
+
+# you can nest if statements (put an if inside another if)
+# be aware of indentation
+
+# LOOPS
+# use a loop when you want to repeat code
+# in python we have for loops and whiel loops
+# for loop sturcutre
+# for item in sequence:
+#   body of for loop (code if you want repeated)
+for item in [3, 5, 7, "hello"]:
+    print(item)
+for letter in "slalom":
+    print(letter)
+# we can also make our own sequence using range()
+# range(stop) # [0, stop)
+for i in range(9):
+    print(i, end=" ")
+print()
+
+# range(start, stop) # [start, stop)
+for i in range(4, 9):
+    print(i, end=" ")
+print()
+
+# range(start, stop, step) # [start, stop) up by step
+for i in range(4, 9, 2):
+    print(i, end=" ")
+print()
+
+# task: write a for loop to print 8 6 4
+# task: write a for loop to print the first 20 even numbers
+for i in range(8, 2, -2):
+    print(i, end=" ")
+print(4)
+for i in range(2, 40, 2):
+    print(i, end=", ")
+print(i + 2)
+
+# ADVANCED LOOPs
+# like if statements you can nest loops
+# we can get an early exit from a loop with the break keyword
+# while loops
+# whie loops structure
+# while condition is true:
+#   body of loop(code to repeated)
+#   progress towards condition being false
+# while True:
+#    user_input = input("enter a word(stop to exit): ")
+#    if user_input == "stop":
+#        break # early exit 
+
+# task: rewrite the first 20 even # code to use a while loop instead of a for loop
+k = 2
+while k <= 38:
+    print(k, end=", ")
+    k += 2 #progress towards k > 38
+print(k)
+
+# FUNCTIONs
+# a named sequence of satements
+# we have been using functions: math.pow(), print(), sorted(), len()
+# int(), range(), input()
+# functions accept input (argyments when you "call" the function)
+# parameters when you "define" the function
+# functions produce output (return values aka results)
+# function structure
+# def function_name(parameter list):
+#   function body (statements to be executed
+#   when this function is "called")
+
+# example 1: a function with no inputs (no arguments when you call it)
+# and no outputs
+def say_hello():
+    print("hello")
+say_hello()
+for i in range(5):
+    say_hello()
+
+# example 2: a function with one inputs (one arugments when yo call it)
+# and no outputs
+def say(message):
+    print("message:", message)
+say("yo yo") # function call)
+
+# tasl: define/call function that accepts a radius of a circle
+# and prints the circles area
