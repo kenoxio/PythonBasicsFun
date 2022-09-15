@@ -1,4 +1,5 @@
-import math
+from email.utils import collapse_rfc2231_value
+import math, random
 from operator import itemgetter
 
 # this is a one line comment askldjfaskldj
@@ -189,5 +190,50 @@ def say(message):
     print("message:", message)
 say("yo yo") # function call)
 
-# tasl: define/call function that accepts a radius of a circle
+# task: define/call function that accepts a radius of a circle
 # and prints the circles area
+
+# RANDOM NUMBER
+# often we need random numbers to simulate random events 
+# or initializing the state of an algorithm
+
+# if you want the same random numbers each time you run
+# your program, "seed" the random number generator
+random.seed(0)
+
+# lets roll a 6 sided die
+# import the random module
+roll = random.randrange(1, 101) # [1, 7)
+print("Rolled number:",roll)
+if roll == [1]:
+    print("YOU WON!")
+else:    
+    print("Try again!")
+
+cars = ["Corolla", "Lamborghini", "Skyline GTR R34", "Koenigsegg"]
+cars.append("Mercedes AMG")
+print(cars)
+# extend
+cars.extend(["Legacy", "Jaguar"])
+print(cars)
+# +=
+cars += ["Forester", "Accord"]
+print(cars)
+cars2 = ["Ghost", "Jesko"]
+cars += cars2
+print(cars)
+
+#removed a car in the list through pop (position)
+cars.pop(0)
+print(cars)
+
+#create a string from a list of strings
+word_list = ["*", "c", "or", "o", "lla", "*"]
+word_str = "".join(word_list)
+print(word_str)
+word_list2 = list(word_str)
+print(word_list2)
+comma_seperated_value_str = "c,or,o,lla"
+word_list3 = comma_seperated_value_str.split(",")
+print(word_list3)
+
