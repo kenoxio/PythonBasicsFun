@@ -55,6 +55,16 @@ def convert_column_to_numeric(table, col_index):
     for row in table:
         row[col_index] = int(row[col_index])
 
+def pretty_printer(header, table):
+        # look into the tabulate module for a true pretty printer
+        for col_name in header:
+            print(col_name, end="\t")
+        print()
+        for row in table:
+            for value in row:
+                print(value, end="\t")
+        print(row)
+
 file_lines = load_lines_from_file("data.csv") # relative path
 print(file_lines)
 # we need to remove the newlines (\n)
@@ -74,3 +84,4 @@ print(table)
 # TASK: define/call pretty_print(header, table)
 # print out the column names and the data values in a nice grid like
 # structure
+print(pretty_printer)
