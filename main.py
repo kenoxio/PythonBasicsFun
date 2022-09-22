@@ -237,3 +237,14 @@ comma_seperated_value_str = "c,or,o,lla"
 word_list3 = comma_seperated_value_str.split(",")
 print(word_list3)
 
+# String methods
+# like join (), Split()
+# strip()
+word = "    \n \t\t    hello   \n\n\t  "
+print(repr(word))
+word = word.strip()
+print(repr(word))
+# find()
+print(word.find("ll"))
+# it prints 2, which is the position of where it starts
+print (word.find("zz")) 
