@@ -76,4 +76,3 @@ print(word[0], word[-1], word[2:4])
 # strings are immutable (can not be changed)
 wprd = "G" + word[1:]
 print(word)
-print((word, end = "\n") * 5)
